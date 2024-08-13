@@ -2,42 +2,90 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4;
 }
 
 header {
-    background-color: #333;
+    background-color: #007BFF;
     color: #fff;
-    padding: 10px;
+    padding: 15px;
     text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-main {
+.container {
     padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-section {
+#controls {
     margin-bottom: 20px;
-}
-
-label {
-    display: block;
-    margin: 5px 0;
-}
-
-input[type="text"], input[type="date"] {
-    width: 100%;
-    padding: 8px;
-    margin: 5px 0;
+    text-align: right;
 }
 
 button {
-    padding: 10px 15px;
+    padding: 10px 20px;
     background-color: #007BFF;
     color: #fff;
     border: none;
     cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
 }
 
 button:hover {
     background-color: #0056b3;
+}
+
+#calendar {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#calendarView {
+    /* Add styles to display calendar */
+    height: 600px;
+    overflow: auto;
+}
+
+#assignment {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="text"], input[type="date"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #28a745;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #218838;
 }
