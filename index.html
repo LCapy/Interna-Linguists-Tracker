@@ -7,33 +7,33 @@
     <link rel="stylesheet" href="styles.css">
     <script src="validador.js" defer></script>
     <script src="xlsx.full.min.js" defer></script>
+    <!-- Include a calendar library if needed -->
 </head>
 <body>
     <header>
         <h1>Linguist Scheduler</h1>
     </header>
     <main>
-        <section id="upload">
-            <h2>Import Data</h2>
-            <input type="file" id="fileInput" />
-            <button onclick="importData()">Import</button>
-        </section>
-        <section id="calendar">
-            <h2>Calendar</h2>
-            <div id="calendarView"></div>
-        </section>
-        <section id="assignment">
-            <h2>Assign Linguists</h2>
-            <form id="assignmentForm">
-                <label for="linguistName">Linguist Name:</label>
-                <input type="text" id="linguistName" required />
-                <label for="project">Project:</label>
-                <input type="text" id="project" required />
-                <label for="date">Date:</label>
-                <input type="date" id="date" required />
-                <button type="submit">Assign</button>
-            </form>
-        </section>
+        <div class="container">
+            <section id="controls">
+                <button id="showAddProjectDialog">Add Project</button>
+            </section>
+            <section id="calendar">
+                <div id="calendarView"></div>
+            </section>
+            <section id="assignment" class="hidden">
+                <h2>Assign Linguists</h2>
+                <form id="assignmentForm">
+                    <label for="linguistName">Linguist Name:</label>
+                    <input type="text" id="linguistName" required />
+                    <label for="project">Project:</label>
+                    <input type="text" id="project" required />
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" required />
+                    <button type="submit">Assign</button>
+                </form>
+            </section>
+        </div>
     </main>
 </body>
 </html>
